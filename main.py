@@ -16,13 +16,14 @@ def play_morse() -> None:
     morse_text = input("Enter a text sequence: ").upper()
     for char in morse_text:
         if char == ' ':
-            sleep(2)
+            sleep(0.8)
         else:
             for elem in morse_dict[char]:
                 if elem == '.':
-                    Beep(frequency=500, duration=850)
+                    Beep(frequency=500, duration=750)
                 else:
                     Beep(frequency=500, duration=1100)
+        sleep(0.5)
 
 
 # Main
